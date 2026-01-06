@@ -1,3 +1,7 @@
 # ninja log v6
 25	97	7893563018411854	CMakeFiles/Snake_Game.dir/main.c.obj	3b291a4b4a97b96b
 98	190	7893563019141905	Snake_Game.exe	445f829b0ebe973b
+31	182	7894430028713764	CMakeFiles/Snake_Game.dir/map.c.obj	60411a6e72517f28
+26	183	7894430028663240	CMakeFiles/Snake_Game.dir/main.c.obj	3b291a4b4a97b96b
+35	184	7894430028754263	CMakeFiles/Snake_Game.dir/snake.c.obj	15bd3948f4ac88e8
+184	489	7894430030239561	Snake_Game.exe	51a6c5d0b4b776b4

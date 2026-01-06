@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include "map.h"
 
+#include <stdlib.h>
+
 char** create_table(int lines, int columns) {
     char **table;
 
@@ -23,5 +25,13 @@ char** create_table(int lines, int columns) {
     }
 
     return table;
+}
+
+void free_table(char** table, int lines) {
+    for (int i = 0; i < lines; i++) {
+        free(table[i]);
+    }
+    free(table);
+    return;
 }
 

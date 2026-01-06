@@ -11,5 +11,6 @@ typedef struct snake_node { // Each ball of snake will be this type of struct
 } snake_node;
 
 snake_node* create_snake_node(int x, int y);
+void free_snake_node(snake_node *node);
 
 #endif //SNAKE_GAME_SNAKE_H

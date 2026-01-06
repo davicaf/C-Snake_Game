@@ -18,3 +18,12 @@ snake_node* create_snake_node(int x, int y) {
     return new_node;
 }
 
+void free_snake_node(snake_node *node) {
+    snake_node *temp;
+    snake_node *current = node;
+    while (current != NULL) {
+        temp = current->next; // We save the address of the next node
+        free(current); // Free the current node
+        current = temp; // Jump to the next node address
+    }
+}
