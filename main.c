@@ -1,19 +1,9 @@
-// This project was made from me (Davi Ferreira) when i was without internet connection, was a quick project that i made but eu me esforcei bastante e tentei aplicar o que eu tinha aprendido na graduação até o momento que estou escrevendo isso (indo para o 5° período da faculdade)
-// Sempre quis fazer um jogo e acho que essa foi uma boa ideia de mesclar meu desejo de ser um desenvolvedor de jogos (mesmo que simples haha) e conectar com meu conhecimento em software!
 
 #include <stdio.h>
 #include <stdlib.h>
 
 #define LINES 20
 #define COLUMNS 20
-
-char **create_table(LINES, COLUMNS);
-    *linhas = malloc(LINES*sizeof(LINES));
-    for (int i = 0; i < COLUMNS; i++){
-
-    }
-
-
 
 
 
@@ -33,6 +23,31 @@ snake_node* create_snake_node(int x, int y) {
 
     return new_node;
 }
+
+char** create_table(int lines, int columns) {
+    char **table;
+
+    table = (char**)malloc(lines * sizeof(char*));
+    if (table == NULL) {
+        return NULL;
+    }
+
+    for (int i = 0; i < lines; i++) {
+        table[i] = (char*)malloc(columns * sizeof(char));
+        if (table[i] == NULL) {
+            return NULL;
+        }
+        for (int j = 0; j < columns; j++) {
+            table[i][j] = '#';
+        }
+    }
+
+    return table;
+}
+
+
+
+
 int main(void) {
 
 
