@@ -10,6 +10,8 @@
 
 char** create_table(int lines, int columns);
 void free_table(char** table, int lines);
+void print_table(char** table, int lines, int columns);
+
 
 
 #endif //SNAKE_GAME_MAP_H

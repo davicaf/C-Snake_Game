@@ -20,7 +20,11 @@ char** create_table(int lines, int columns) {
             return NULL;
         }
         for (int j = 0; j < columns; j++) {
-            table[i][j] = '#';
+            if (i == 0 || i == lines - 1 || j == 0 || j == columns - 1) {
+                table[i][j] = '#';
+            } else {
+                table[i][j] = ' ';
+            }
         }
     }
 
@@ -32,6 +36,15 @@ void free_table(char** table, int lines) {
         free(table[i]);
     }
     free(table);
-    return;
 }
+
+void print_table(char** table, int lines, int columns) {
+    for (int i = 0; i < lines; i++) {
+        for (int j = 0; j < columns; j++) {
+            printf("%c", table[i][j]);
+        }
+        printf("\n");
+    }
+}
+
 
